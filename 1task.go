@@ -32,5 +32,5 @@ func main() {
 
 	fmt.Println("расстояние км", distance)
 	fmt.Println("расход:", consumption)
-	fmt.Println("стоимость поездки:", (distance * price))
+	fmt.Println("стоимость поездки:", (distance/100*consumption * price))
 }
