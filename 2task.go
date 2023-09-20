@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import(
+	"fmt"
+    "strconv"
+	)
 
-func main() {
-	var number, first, second, third int
+func main() {a:= strconv/Itoa()
+	fmt.Printf("%q\n",a)}
+
 
 	fmt.Println("Введите трехзначное число:")
 	fmt.Scanf("%d\n", &number)
