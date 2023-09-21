@@ -1,22 +1,33 @@
 package main
 
-import(
+import (
 	"fmt"
-    "strconv"
-	)
+)
 
-func main() {a:= strconv/Itoa()
-	fmt.Printf("%q\n",a)}
+// func reverseNumber(num int) int {
 
+//    res := 0
+//    for num > 0 {
+//       remainder := num % 10
+//       res = (res * 10) + remainder
+//       num /= 10
+//    }
+//    return res
+// }
 
-	fmt.Println("Введите трехзначное число:")
-	fmt.Scanf("%d\n", &number)
+func Reverse(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
+}
 
-	first = number / 100
-	second = (number / 10) % 10
-	third = number % 10
+func main() {
+	var s string
 
-	result := third*100 + second*10 + first
+	fmt.Println("Введите значение:")
 
-	fmt.Printf("%d", result)
+	fmt.Scanf("%s ", &s)
+	fmt.Println(Reverse(s))
 }
