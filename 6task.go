@@ -32,7 +32,7 @@ func rec(count int, isDigits, isLowercase, isUppercase, isSpecial, isLength, tru
 		truePassword = checkPassword(isDigits, isLowercase, isUppercase, isSpecial, isLength, truePassword, inPassword)
 		rec(count, isDigits, isLowercase, isUppercase, isSpecial, isLength, truePassword, inPassword)
 	} else if count < 5 && truePassword {
-		fmt.Println("Пароль верный")
+		fmt.Println("the password is correct")
 	} else {
 		fmt.Println("Слишком много попыток")
 	}
@@ -58,7 +58,7 @@ func checkPassword(isDigits, isLowercase, isUppercase, isSpecial, isLength, true
 
 		}
 		if !isDigits {
-			fmt.Println("Пароль не содержит цифр")
+			fmt.Println("the password does not number")
 		}
 		if !isLowercase {
 			fmt.Println("Пароль не содержит маленьких букв")
@@ -71,7 +71,7 @@ func checkPassword(isDigits, isLowercase, isUppercase, isSpecial, isLength, true
 		}
 	} else {
 		isLength = false
-		fmt.Println("Пароль не правильной длинны")
+		fmt.Println("password is incorrect")
 	}
 
 	if isDigits && isLowercase && isUppercase && isSpecial && isLength {
